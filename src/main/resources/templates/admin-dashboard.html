@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" th:href="@{/css/admin.css}">
+</head>
+<body>
+<header>
+    <h1>LMS Admin Portal</h1>
+    <nav>
+        <a th:href="@{/admin/users}">Manage Users</a>
+        <a th:href="@{/admin/courses}">Manage Courses</a>
+        <a th:href="@{/logout}">Logout</a>
+    </nav>
+</header>
+
+<section class="stats">
+    <div class="card">Total Users: 150</div>
+    <div class="card">Total Courses: 10</div>
+</section>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Dashboard | LMS</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<nav>
+    <h2>LMS Dashboard</h2>
+    <a th:href="@{/logout}">Logout</a>
+</nav>
+
+<section class="dashboard">
+    <h3>Welcome to LMS</h3>
+    <div class="card">
+        <h4>All Courses</h4>
+        <p>View and continue your learning modules.</p>
+        <a th:href="@{/courses}" class="btn">Browse</a>
+    </div>
+</section>
+</body>
+</html>

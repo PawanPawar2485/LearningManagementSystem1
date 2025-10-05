@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Manage Users</title>
+</head>
+<body>
+<h2>Users</h2>
+<table>
+    <thead>
+    <tr><th>ID</th><th>Name</th><th>Email</th><th>Role</th><th>Action</th></tr>
+    </thead>
+    <tbody>
+    <tr th:each="user : ${users}">
+        <td th:text="${user.id}"></td>
+        <td th:text="${user.firstName + ' ' + user.lastName}"></td>
+        <td th:text="${user.email}"></td>
+        <td th:text="${#lists.join(user.roles, ',')}"></td>
+        <td><a th:href="@{'/admin/delete/' + ${user.id}}">Delete</a></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
